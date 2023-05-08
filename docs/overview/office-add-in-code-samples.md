@@ -18,6 +18,13 @@ The following samples show how to build the simplest Office Add-in with only a m
 - [PowerPoint "Hello world" add-in](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/powerpoint-hello-world)
 - [Word "Hello world" add-in](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/word-hello-world)
 
+## Outlook scenarios
+
+### Enable better collaboration in a hybrid working environment
+
+- [Use Smart Alerts events in your Outlook add-in](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/word-hello-world)
+- [Create an Outlook add-in for an online-meeting provider](https://github.com/OfficeDev/Office-Add-in-samples/tree/main/Samples/hello-world/word-hello-world)
+
 ## Blazor WebAssembly
 
 If your development background is in building VSTO Add-ins, the following samples show how to build Office Web Add-ins using .NET Blazor WebAssembly. You can keep much of your code in C# and Visual Studio.
