@@ -47,20 +47,14 @@ landingContent:
             url: ../publish/publish.md
 
   # Card (optional)
-  - title: Key Office Add-ins concepts
+  - title: Enable better collaboration in a hybrid working environment
     linkLists:
       - linkListType: overview
         links:
-          - text: Office Add-ins platform overview
+          - text: Use Smart Alerts
             url: ../overview/office-add-ins.md
-      - linkListType: concept
-        links:
-          - text: Core concepts for Office Add-ins
+          - text: Create an Outlook add-in for an online-meeting provider
             url: ../overview/core-concepts-office-add-ins.md
-          - text: Design Office Add-ins
-            url: ../design/add-in-design.md
-          - text: Develop Office Add-ins
-            url: ../develop/develop-overview.md
 
   # Card
   - title: Resources
