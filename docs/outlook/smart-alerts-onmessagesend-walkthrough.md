@@ -1,7 +1,7 @@
 ---
 title: Use Smart Alerts and the OnMessageSend and OnAppointmentSend events in your Outlook add-in
 description: Learn how to handle the on-send events in your Outlook add-in using event-based activation.
-ms.date: 06/30/2023
+ms.date: 07/31/2023
 ms.topic: how-to
 ms.localizationpriority: medium
 ---
@@ -492,6 +492,14 @@ While a Smart Alerts dialog message can be changed to suit your add-in scenario 
 - The message's format. For example, you can't change the text's font size and color or insert a bulleted list.
 - The dialog options. For example, the **Send Anyway** and **Don't Send** options are fixed and depend on the [send mode option](#available-send-mode-options) you select.
 - Event-based activation processing and progress information dialogs. For example, the text and options that appear in the timeout and long-running operation dialogs can't be changed.
+
+## Best practices
+
+The Smart Alerts feature confirms that all outgoing mail items are compliant with the information protection policies of an organization and helps users improve their messages through recommendations. To ensure your add-in always provides users with a smooth and efficient sending experience, apply the following guidelines.
+
+- **Don't let your add-in further delay the send operation**. Smart Alerts add-ins must be short-running and lightweight. Avoid overloading the `OnMessageSend` and `OnAppointmentSend` event handlers with heavy validations. To prevent this, pre-process information when other events occur, such as `OnMessageRecipientsChanged` and `OnMessageAttachmentsChanged`. To determine which events your add-in can respond to, see the "Supported events" section of [Configure your Outlook add-in for event-based activation](autolaunch.md#supported-events).
+- **Don't implement additional dialogs**. Prevent overwhelming your users with too many dialogs. Instead, customize the text in the Smart Alerts dialog to convey information. If needed, you can also [customize the **Don't Send** button](#customize-the-dont-send-button-optional-preview) to provide users with additional information and functionality through a task pane (preview).
+- **Enable the Group Policy setting in your organization**. Ensure your Smart Alerts add-in activates on each mail item, including those sent using applications that implement Simple MAPI, through the **Running Outlook for Simple MAPI Sending** Group Policy setting. To learn more about this setting, see [Activate Smart Alerts in applications that use Simple MAPI](#activate-smart-alerts-in-applications-that-use-simple-mapi).
 
 ## Differences between Smart Alerts and the on-send feature
 
