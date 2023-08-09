@@ -25,8 +25,8 @@ The following JSON shows how to define a function with the `id` property "MULTIP
 ```JSON
 {
     "id": "MULTIPLY",
-    "name": "SUMME",
-    "description": "Summe zwei Zahlen",
+    "name": "Multiplizieren",
+    "description": "Multipliziert zwei Zahlen",
     "helpUrl": "http://www.contoso.com",
     "result": {
         "type": "number",
